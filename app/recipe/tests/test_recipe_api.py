@@ -2,7 +2,6 @@
 Test for recipe APIs.
 """
 from decimal import Decimal
-from venv import create
 
 from django.contrib.auth import get_user_model
 from django.test import TestCase
@@ -269,4 +268,3 @@ class PrivateRecipeAPITests(TestCase):
 
         self.assertEqual(res.status_code, status.HTTP_200_OK)
         self.assertEqual(recipe.tags.count(), 0)
-        status.http404
